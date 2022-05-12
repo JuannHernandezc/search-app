@@ -7,3 +7,9 @@ Este proyecto fue realizado con React JS y las siguientes librerias que nos perm
 ## Para Acceder a la pagina en producción debe ir al siguiente enlace
 
 Dale clic a [Search-App](https://sprightly-cocada-cdb0b3.netlify.app/)
+
+## Para acceder a los ejercicios practicos
+
+Para acceder a los ejercicios practicos se debe abrir o descargar el archivo :
+
+  - Exercises.txt
