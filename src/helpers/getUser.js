@@ -1,15 +1,15 @@
-export const getUsers = async ( word ) => {
-    const url = `https://api.github.com/search/users?q=${word}`;
-    console.log(url);
+export const getUser = async ( word ) => {
+    const url = `https://api.github.com/users/${word}`;
     const answer = await fetch(url);
-    const { items } = await answer.json();
-    const users = items.map( user => {
+    const { login, id, avatar_url, location, followers } = await answer.json();
+    const userInfo = () =>{
         return {
-            id: user.id,
-            username: user.login,
-            avatar_url: user.avatar_url
+            id: id,
+            username: login,
+            avatar_url: avatar_url,
+            location: location,
+            followers: followers
         };
-    });
-    const usersModified = users.splice(0,10);
-    return usersModified;
+    }
+    return userInfo;
 }

@@ -19,8 +19,6 @@ const CardUsers = ({ word }) => {
     setModalShow(true);
     setUsername(id);
   };
-
-  console.log(username);
   return (
     <Container>
       <Row className="justify-content-center">
