@@ -27,7 +27,7 @@ const ModalUser = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Informacion de Usuario
+          Información de Usuario
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -42,10 +42,10 @@ const ModalUser = (props) => {
               <ListGroupItem>
               {data.location
                   ? (
-                      <span><b>Localizacion:</b> {data.location}</span>
+                      <span><b>Localización:</b> {data.location}</span>
                   )
                   : (
-                    <span><b>Localizacion:</b> N/A</span>
+                    <span><b>Localización:</b> N/A</span>
                   )}
               </ListGroupItem>
               <ListGroupItem> <b>Seguidores:</b> {data.followers}</ListGroupItem>

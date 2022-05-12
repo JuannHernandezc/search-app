@@ -1,0 +1,107 @@
+1. Escriba un ejemplo de código en JS para agregar o retirar una clase “show” al realizar click en un elemento definido como
+
+            - - - - - - - - - - - - - -
+            - - - S O L U C I O N - - -
+            - - - - - - - - - - - - - -
+<nav class="collapse" id="barra-menu" name="barrade-menu">
+</nav>
+
+<script>
+  const nav = document.getElementById("barra-menu");
+
+  //Función que nos permite agregar una clase nombrada show 
+
+  const handleAddClass = () => {
+  	nav.addEventListener('click', () =>{
+  		nav.classList.add('show');
+ 		});
+  }
+
+  //Función que nos permite remover una clase llamada show
+
+  const handleRemove = () =>{
+  	nav.addEventListener('click', () =>{
+  		nav.classList.remove('show');
+  	});
+  }
+  handleAddClass();
+  handleRemove();
+
+</script>
+
+2. Del siguiente código identifique los errores que no permitirían una correcta visualización de los elementos, identifique malas prácticas y elementos que no corresponden a HTML5. Realice las correcciones correspondientes.
+
+            - - - - - - - - - - - - - -
+            - - - S O L U C I O N - - -
+            - - - - - - - - - - - - - -
+
+- Una de las malas practicas que se pueden analizar en el código es la falta de HTML5 o más conocido como HTML semántico, el cual nos permite tener una organización y comprensión mayor del código.
+- La cantidad de etiquetas div es excesiva hace que sea difícil saber cuando cierran y cuando abren.
+- Hay atributos style dentro de la etiquetas HTML, lo cual es una mala practica estos estilos deben tener un archivo aparte.
+- Hay Etiquetas que normlamente tienen un contenedor padr, es una mala practica ponerlas sin dicho contenedos. Ejemplo: 
+    1. <label>
+    2. <input>
+    3. <th>
+    4. <tr>
+
+- Hacen falta etiquetas importante que permiten que el codigo HTML tenga un jerarquia. Ejemplo: 
+    1. <body>
+    2. <html>
+    3. <head>
+
+- - - - - - - - - - - - - - - -
+- - - C O R R E C C I O N - - -
+- - - - - - - - - - - - - - - -
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 2</title>
+  </head>
+  <body>
+    <header>
+      <h1>Users Information</h1>
+    </header>
+    <main>
+      <section>
+        <form>
+          <label>To update an existing user</label>
+          <button>Update</button>
+        </form>
+      </section>
+      <section>
+        <form>
+          <label>To add a new user</label>
+          <button>Add new</button>
+        </form>
+      </section>
+      <section>
+        <h2>Current Users</h2>
+        <table>
+            <caption>User Table</caption>
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Fausto01</td>
+                    <td>Fausto</td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+        Programado por: Juan Nicolás Hernández Chávez
+    </footer>
+  </body>
+</html>
+

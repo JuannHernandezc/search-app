@@ -12,12 +12,12 @@ const AddNameUser = ({ setWord }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim().length < 4) {
-      setError("La cantidad de caracteres debe ser mayor a 4");
+      setError("La cantidad de carácteres debe ser mayor a 4");
       console.log(error);
       return;
     }
     if (inputValue.trim().toLowerCase() === "teleperformance") {
-      setError("Las busqueda no es valida");
+      setError("La búsqueda no es válida");
       return;
     }
     setWord(inputValue);

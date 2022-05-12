@@ -9,7 +9,7 @@ function App() {
      <h1> Users Search App</h1>
      <hr />
      <AddNameUser setWord = { setWord }/>
-     <h5 className="text-center mt-5 text-light">Criterio de busqueda: { word }</h5>
+     <h5 className="text-center mt-5 text-light">Criterio de búsqueda: { word }</h5>
      <CardUsers word = { word }/>
     </>
   );
